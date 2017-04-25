@@ -133,12 +133,13 @@ log "Generating map..."
 DATE=`date +%Y-%m-%d:%H:%M:%S`
 log "Started map generation at $DATE"
 
-bin/mapcrafter/src/mapcrafter -c render.conf -j "$HW_THREADS"
+bin/mapcrafter/src/mapcrafter -c chris-render.conf -j "$HW_THREADS"
 
 DATE=`date +%Y-%m-%d:%H:%M:%S`
 log "Finished map generation at $DATE"
 
 log "Uploading map to web server..."
+
 
 function s3_sync {
     log "Running S3 sync..."
